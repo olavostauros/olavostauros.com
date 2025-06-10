@@ -1,6 +1,6 @@
 # Personal Website for Olavo Stauros
 
-Create a modern, single-page personal website for olavostauros.com using Astro framework with pure CSS styling and vanilla JavaScript.
+Create a modern, single-page personal website for olavostauros.com using Astro framework with pure CSS styling and vanilla JavaScript. This is a static portfolio website without any forms or interactive elements beyond navigation and visual effects.
 
 ## Design Requirements
 
@@ -32,8 +32,9 @@ Include:
 - GitHub: https://github.com/olavostauros
 - LinkedIn: https://www.linkedin.com/in/olavostauros/
 - WhatsApp button: https://wa.me/+5527981218258 (with CSS icon)
-- Optional Formspree contact form
 - Copyright notice
+
+*Note: This is a static website with no contact forms - visitors can reach out via the provided social links and email.*
 
 ## Color Palette
 - **Dark**: #121212 (backgrounds/text)
@@ -46,11 +47,12 @@ Include:
 
 - Use Astro framework with static output
 - Pure CSS (no frameworks) with Inter font
-- Vanilla JavaScript only (no TypeScript)
+- Vanilla JavaScript only (no TypeScript) - minimal JS for smooth scrolling navigation
 - Responsive design with modern CSS (flexbox/grid)
 - Smooth transitions and hover effects
 - Professional accessibility standards
 - Modular component structure
+- **No forms or interactive elements** - purely static content with navigation
 
 ## File Structure Needed
 - `index.astro` (main page)
