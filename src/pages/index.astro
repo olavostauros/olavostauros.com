@@ -1,64 +1,312 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <Layout>
-	<header>
-		<nav role="navigation" aria-label="Main navigation">
-			<div class="nav-container">
-				<div class="nav-logo">
-					<a href="#hero">Olavo Stauros</a>
-				</div>
-				<div class="nav-links">
-					<a href="#hero">Home</a>
-					<a href="#about">About</a>
-					<a href="#projects">Projects</a>
-					<a href="#contact">Contact</a>
-				</div>
-			</div>
-		</nav>
-	</header>
+	<Header />
 
 	<main>
 		<section id="hero" aria-label="Hero section">
 			<div class="hero-content">
-				<h1>Hero Section</h1>
-				<p>Full-width introduction area placeholder</p>
+				<h1>Olavo Stauros</h1>
+				<p class="hero-tagline">Systems Analysis Student & Aspiring Tech Professional</p>
+				<div class="hero-cta">
+					<a href="#about" class="cta-button">Learn More About Me</a>
+					<a href="#contact" class="cta-button secondary">Get In Touch</a>
+				</div>
 			</div>
 		</section>
 
 		<section id="about" aria-label="About section">
 			<div class="container">
-				<h2>About</h2>
-				<p>Personal bio section placeholder</p>
+				<div class="about-content">
+					<div class="about-text">
+						<h2>About Me</h2>
+						<p>Second-semester Systems Analysis student from Vila Velha, Espírito Santo. Passionate about web development and problem-solving, with experience in administrative roles managing data and communication strategies. Skilled in Astro, Git, and Neovim.</p>
+						
+						<div class="skills">
+							<h3>Technologies I work with:</h3>
+							<div class="skills-grid">
+								<span class="skill-tag">Astro</span>
+								<span class="skill-tag">Git</span>
+								<span class="skill-tag">Neovim</span>
+								<span class="skill-tag">HTML/CSS</span>
+								<span class="skill-tag">JavaScript</span>
+								<span class="skill-tag">Web Development</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="about-image">
+						<div class="profile-placeholder">
+							<svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+								<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+								<circle cx="12" cy="7" r="4"></circle>
+							</svg>
+							<p>Profile Photo</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<section id="projects" aria-label="Projects section">
 			<div class="container">
-				<h2>Projects</h2>
+				<h2>My Projects</h2>
+				<p class="section-subtitle">Here are some of the projects I've been working on</p>
+				
 				<div class="projects-grid">
-					<div class="project-card">
-						<h3>Project 1</h3>
-						<p>Portfolio grid layout placeholder</p>
-					</div>
-					<div class="project-card">
-						<h3>Project 2</h3>
-						<p>Portfolio grid layout placeholder</p>
-					</div>
-					<div class="project-card">
-						<h3>Project 3</h3>
-						<p>Portfolio grid layout placeholder</p>
-					</div>
+					<ProjectCard 
+						title="Personal Website"
+						description="A modern, responsive personal website built with Astro. Features a clean design, smooth animations, and optimized performance."
+						technologies={["Astro", "CSS", "HTML", "JavaScript"]}
+						status="Live"
+						githubUrl="https://github.com/olavostauros"
+						liveUrl="#"
+					/>
+					
+					<ProjectCard 
+						title="Fitness Landing Page"
+						description="A responsive landing page for a fitness center, showcasing services, trainers, and membership plans with modern UI/UX design."
+						technologies={["HTML", "CSS", "JavaScript"]}
+						status="Completed"
+						githubUrl="https://github.com/olavostauros"
+					/>
+					
+					<ProjectCard 
+						title="Portfolio Project"
+						description="An upcoming project that will showcase my development skills and learning journey. Stay tuned for updates!"
+						technologies={["To be determined"]}
+						status="Planning"
+					/>
 				</div>
 			</div>
 		</section>
 	</main>
 
-	<footer id="contact" aria-label="Contact section">
-		<div class="container">
-			<h2>Contact</h2>
-			<p>Footer with social links placeholder</p>
-		</div>
-	</footer>
+	<Footer />
 </Layout>
+
+<style>
+	/* Hero Section Styles */
+	#hero {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+		color: white;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	#hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.1);
+		z-index: 1;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		max-width: 800px;
+		padding: 2rem;
+	}
+
+	.hero-content h1 {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 700;
+		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.hero-tagline {
+		font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		font-weight: 300;
+	}
+
+	.hero-cta {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.cta-button {
+		display: inline-block;
+		padding: 1rem 2rem;
+		background: white;
+		color: var(--color-primary);
+		text-decoration: none;
+		border-radius: 50px;
+		font-weight: 600;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	}
+
+	.cta-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	}
+
+	.cta-button.secondary {
+		background: transparent;
+		color: white;
+		border: 2px solid white;
+	}
+
+	.cta-button.secondary:hover {
+		background: white;
+		color: var(--color-primary);
+	}
+
+	/* About Section Styles */
+	#about {
+		padding: 5rem 0;
+		background: var(--color-light);
+	}
+
+	.about-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.about-text h2 {
+		color: var(--color-primary);
+		margin-bottom: 1.5rem;
+		font-size: 2.5rem;
+	}
+
+	.about-text p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: var(--color-text);
+		margin-bottom: 2rem;
+	}
+
+	.skills h3 {
+		color: var(--color-primary);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+	}
+
+	.skills-grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.skill-tag {
+		background: var(--color-primary);
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 25px;
+		font-size: 0.875rem;
+		font-weight: 500;
+	}
+
+	.about-image {
+		display: flex;
+		justify-content: center;
+	}
+
+	.profile-placeholder {
+		width: 250px;
+		height: 250px;
+		background: rgba(59, 130, 246, 0.1);
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border: 3px dashed var(--color-primary);
+		color: var(--color-primary);
+	}
+
+	.profile-placeholder p {
+		margin-top: 1rem;
+		font-weight: 500;
+	}
+
+	/* Projects Section Styles */
+	#projects {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	#projects h2 {
+		color: var(--color-primary);
+		text-align: center;
+		margin-bottom: 1rem;
+		font-size: 2.5rem;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		color: var(--color-text);
+		margin-bottom: 3rem;
+		font-size: 1.1rem;
+	}
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	/* Mobile Responsive */
+	@media (max-width: 768px) {
+		.hero-content {
+			padding: 1rem;
+		}
+
+		.hero-cta {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.cta-button {
+			width: 100%;
+			max-width: 250px;
+		}
+
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+			text-align: center;
+		}
+
+		.about-text h2,
+		#projects h2 {
+			font-size: 2rem;
+		}
+
+		.profile-placeholder {
+			width: 200px;
+			height: 200px;
+		}
+
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+
+		#about,
+		#projects {
+			padding: 3rem 0;
+		}
+	}
+</style>

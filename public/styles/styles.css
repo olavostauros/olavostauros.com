@@ -7,6 +7,13 @@
   --bright-red: #D90404;
   --gray: #312C2D;
   
+  /* Component-specific color variables */
+  --color-primary: #3b82f6;
+  --color-accent: #8b5cf6;
+  --color-text: #374151;
+  --color-light: #f9fafb;
+  --color-dark: #1f2937;
+  
   /* Additional utility colors */
   --white: #ffffff;
   --black: #000000;
@@ -62,6 +69,7 @@ body {
   font-size: 16px;
   background-color: var(--light);
   overflow-x: hidden;
+  padding-top: 80px; /* Space for fixed header */
 }
 
 /* Base Typography */
