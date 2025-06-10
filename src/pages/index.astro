@@ -3,38 +3,62 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<main>
-		<h1>Welcome to Olavo Stauros</h1>
-		<p>Personal website coming soon...</p>
-	</main>
-</Layout>
+	<header>
+		<nav role="navigation" aria-label="Main navigation">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<a href="#hero">Olavo Stauros</a>
+				</div>
+				<div class="nav-links">
+					<a href="#hero">Home</a>
+					<a href="#about">About</a>
+					<a href="#projects">Projects</a>
+					<a href="#contact">Contact</a>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	
-	p {
-		text-align: center;
-		margin-bottom: 2em;
-	}
-	
-	body {
-		background: linear-gradient(45deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-		min-height: 100vh;
-	}
-</style>
+	<main>
+		<section id="hero" aria-label="Hero section">
+			<div class="hero-content">
+				<h1>Hero Section</h1>
+				<p>Full-width introduction area placeholder</p>
+			</div>
+		</section>
+
+		<section id="about" aria-label="About section">
+			<div class="container">
+				<h2>About</h2>
+				<p>Personal bio section placeholder</p>
+			</div>
+		</section>
+
+		<section id="projects" aria-label="Projects section">
+			<div class="container">
+				<h2>Projects</h2>
+				<div class="projects-grid">
+					<div class="project-card">
+						<h3>Project 1</h3>
+						<p>Portfolio grid layout placeholder</p>
+					</div>
+					<div class="project-card">
+						<h3>Project 2</h3>
+						<p>Portfolio grid layout placeholder</p>
+					</div>
+					<div class="project-card">
+						<h3>Project 3</h3>
+						<p>Portfolio grid layout placeholder</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer id="contact" aria-label="Contact section">
+		<div class="container">
+			<h2>Contact</h2>
+			<p>Footer with social links placeholder</p>
+		</div>
+	</footer>
+</Layout>
