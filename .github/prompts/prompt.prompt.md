@@ -1,27 +1,63 @@
-Create a single-page personal website for olavostauros.com using the Astro framework. The website should have a clean, modern design with the following sections: a header with navigation, a hero section introducing Olavo Stauros, an about section, a projects section, and a contact footer. Use pure CSS for styling, avoiding any CSS frameworks or external libraries. Ensure the site is responsive and mobile-friendly. Include:
+# Personal Website for Olavo Stauros
 
-1. **Header**: Fixed navigation bar with links to each section (Home, About, Projects, Contact).
-2. **Hero Section**: Full-width section with a bold headline introducing Olavo Stauros and a tagline: “Systems Analysis Student & Aspiring Tech Professional.”
-3. **About Section**: Brief bio stating, “Second-semester Systems Analysis student from Cariacica, Espírito Santo. Passionate about web development and problem-solving, with experience in administrative roles managing data and communication strategies. Skilled in Astro, Git, and Neovim.” Include a profile picture placeholder.
-4. **Projects Section**: Grid layout showcasing 3 project cards:
-   - Personal website (this site, built with Astro and pure CSS, hosted on Vercel).
-   - CSV data tool (processes coordinates for Google Maps API compatibility).
-   - Fitness landing page (static site for a personal trainer, built with Astro).
-   Each with a title, short description, and tech-themed placeholder image.
-5. **Contact Footer**: Simple footer with:
-   - Email: olavostauros@gmail.com.
-   - Social media links: GitHub and LinkedIn.
-   - A WhatsApp button linking to https://wa.me/+5527981218258, styled as a clickable button with a WhatsApp icon (use a simple CSS icon or text placeholder, no external images).
-   - A Formspree contact form option.
-   - A copyright notice.
-6. **Styling**: Use pure CSS with the following color palette:
-   - Cor1: #121212 (RGB: 18, 18, 18) for backgrounds or text.
-   - Cor2: #8C030E (RGB: 140, 3, 14) for accents or hover effects.
-   - Cor3: #FFF4ED (RGB: 255, 244, 237) for light backgrounds or text.
-   - Cor4: #D90404 (RGB: 217, 4, 4) for buttons or highlights.
-   - Cor5: #312C2D (RGB: 49, 44, 45) for secondary backgrounds or borders.
-   Use Inter font and minimalist placeholders. Style the WhatsApp button with Cor4 for the background and Cor3 for text, with hover effects using Cor2. Ensure accessibility with proper contrast (e.g., Cor3 or Cor1 for text on contrasting backgrounds) and font sizes. Add smooth transitions and hover effects. Prioritize a professional tone to appeal to tech employers.
-7. **Astro Setup**: Provide the necessary Astro project structure, including a main `index.astro` file, partials for reusable components (e.g., header, footer), and a `styles.css` file in `src/styles/`.
-8. **Output**: Generate the complete code for all files (`index.astro`, component files, and `styles.css`) and include instructions for running the Astro project locally.
+Create a modern, single-page personal website for olavostauros.com using Astro framework with pure CSS styling and vanilla JavaScript.
 
-Ensure the code is well-commented, modular, and optimized for performance. Use modern CSS features like flexbox or grid for layout. Do not use JavaScript for functionality unless absolutely necessary.
+## Design Requirements
+
+Build a clean, professional website with these sections:
+
+### Header
+Fixed navigation bar with smooth scrolling links to: Home, About, Projects, Contact
+
+### Hero Section  
+Full-width introduction with:
+- Bold headline: "Olavo Stauros"
+- Tagline: "Systems Analysis Student & Aspiring Tech Professional"
+
+### About Section
+Brief bio with profile picture placeholder:
+"Second-semester Systems Analysis student from Vila Velha, Espírito Santo. Passionate about web development and problem-solving, with experience in administrative roles managing data and communication strategies. Skilled in Astro, Git, and Neovim."
+
+### Projects Section
+Grid layout with 3 project cards:
+- **Personal Website**: This site built with Astro and pure CSS, hosted on Vercel
+- **Fitness Landing Page**: Static site for a personal trainer, built with Astro  
+- **Portfolio Project**: Placeholder for future web development project, built with Astro
+
+Each card needs a title, description, and placeholder image.
+
+### Contact Footer
+Include:
+- Email: olavostauros@gmail.com
+- GitHub: https://github.com/olavostauros
+- LinkedIn: https://www.linkedin.com/in/olavostauros/
+- WhatsApp button: https://wa.me/+5527981218258 (with CSS icon)
+- Optional Formspree contact form
+- Copyright notice
+
+## Color Palette
+- **Dark**: #121212 (backgrounds/text)
+- **Red Accent**: #8C030E (hover effects)  
+- **Light**: #FFF4ED (light backgrounds/text)
+- **Bright Red**: #D90404 (buttons/highlights)
+- **Gray**: #312C2D (secondary backgrounds/borders)
+
+## Technical Requirements
+
+- Use Astro framework with static output
+- Pure CSS (no frameworks) with Inter font
+- Vanilla JavaScript only (no TypeScript)
+- Responsive design with modern CSS (flexbox/grid)
+- Smooth transitions and hover effects
+- Professional accessibility standards
+- Modular component structure
+
+## File Structure Needed
+- `index.astro` (main page)
+- Header and Footer components  
+- `src/styles/styles.css`
+- `src/scripts/` for any JavaScript
+- `astro.config.mjs` configured for static output
+
+## Deployment
+Configure for Vercel deployment with proper build settings and domain setup at olavostauros.com.
