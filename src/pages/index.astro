@@ -8,19 +8,23 @@ import ProjectCard from '../components/ProjectCard.astro';
 <Layout>
 	<Header />
 
-	<main>
-		<section id="hero" aria-label="Hero section">
+	<main role="main" id="main-content">
+		<section id="hero" aria-label="Hero section - Introduction">
 			<div class="hero-content">
 				<h1>Olavo Stauros</h1>
 				<p class="hero-tagline">Systems Analysis Student & Aspiring Tech Professional</p>
 				<div class="hero-cta">
-					<a href="#about" class="cta-button">Learn More About Me</a>
-					<a href="#contact" class="cta-button secondary">Get In Touch</a>
+					<a href="#about" class="cta-button" aria-describedby="hero-learn-more">Learn More About Me</a>
+					<a href="#contact" class="cta-button secondary" aria-describedby="hero-contact">Get In Touch</a>
+				</div>
+				<div class="sr-only">
+					<span id="hero-learn-more">Navigate to the about section to learn more about Olavo's background and skills</span>
+					<span id="hero-contact">Navigate to the contact section to get in touch with Olavo</span>
 				</div>
 			</div>
 		</section>
 
-		<section id="about" aria-label="About section">
+		<section id="about" aria-label="About section - Background and skills">
 			<div class="container">
 				<div class="about-content">
 					<div class="about-text">
@@ -29,31 +33,32 @@ import ProjectCard from '../components/ProjectCard.astro';
 						
 						<div class="skills">
 							<h3>Technologies I work with:</h3>
-							<div class="skills-grid">
-								<span class="skill-tag">Astro</span>
-								<span class="skill-tag">Git</span>
-								<span class="skill-tag">Neovim</span>
-								<span class="skill-tag">HTML/CSS</span>
-								<span class="skill-tag">JavaScript</span>
-								<span class="skill-tag">Web Development</span>
+							<div class="skills-grid" role="list" aria-label="List of technologies and skills">
+								<span class="skill-tag" role="listitem">Astro</span>
+								<span class="skill-tag" role="listitem">Git</span>
+								<span class="skill-tag" role="listitem">Neovim</span>
+								<span class="skill-tag" role="listitem">HTML/CSS</span>
+								<span class="skill-tag" role="listitem">JavaScript</span>
+								<span class="skill-tag" role="listitem">Web Development</span>
 							</div>
 						</div>
 					</div>
 					
 					<div class="about-image">
-						<div class="profile-placeholder">
-							<svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-								<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-								<circle cx="12" cy="7" r="4"></circle>
-							</svg>
-							<p>Profile Photo</p>
-						</div>
+						<img 
+							src="/profile-placeholder.svg" 
+							alt="Professional placeholder photo representing Olavo Stauros, Systems Analysis Student" 
+							class="profile-image" 
+							width="300" 
+							height="300"
+							loading="lazy"
+						/>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="projects" aria-label="Projects section">
+		<section id="projects" aria-label="Projects section - Portfolio of work">
 			<div class="container">
 				<h2>My Projects</h2>
 				<p class="section-subtitle">Here are some of the projects I've been working on</p>
@@ -66,6 +71,7 @@ import ProjectCard from '../components/ProjectCard.astro';
 						status="Live"
 						githubUrl="https://github.com/olavostauros"
 						liveUrl="#"
+						imageUrl="/project-1.svg"
 					/>
 					
 					<ProjectCard 
@@ -74,6 +80,7 @@ import ProjectCard from '../components/ProjectCard.astro';
 						technologies={["HTML", "CSS", "JavaScript"]}
 						status="Completed"
 						githubUrl="https://github.com/olavostauros"
+						imageUrl="/project-2.svg"
 					/>
 					
 					<ProjectCard 
@@ -81,6 +88,7 @@ import ProjectCard from '../components/ProjectCard.astro';
 						description="An upcoming project that will showcase my development skills and learning journey. Stay tuned for updates!"
 						technologies={["To be determined"]}
 						status="Planning"
+						imageUrl="/project-3.svg"
 					/>
 				</div>
 			</div>

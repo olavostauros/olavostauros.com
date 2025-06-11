@@ -1,26 +1,76 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Personal website of Olavo Stauros, Systems Analysis student from Vila Velha, ES" />
+		<meta name="description" content="Personal website of Olavo Stauros, Systems Analysis student from Vila Velha, ES. Passionate about web development, Git, and modern technologies." />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Olavo Stauros - Systems Analysis Student</title>
+		<meta name="theme-color" content="#8C030E" />
+		<meta name="author" content="Olavo Stauros" />
+		<meta name="keywords" content="Olavo Stauros, Systems Analysis, Web Development, Astro, Git, Neovim, Vila Velha" />
 		
-		<!-- Inter font from Google Fonts -->
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://olavostauros.com/" />
+		<meta property="og:title" content="Olavo Stauros - Systems Analysis Student" />
+		<meta property="og:description" content="Personal website of Olavo Stauros, Systems Analysis student from Vila Velha, ES. Passionate about web development and modern technologies." />
+		<meta property="og:image" content="/profile-placeholder.svg" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://olavostauros.com/" />
+		<meta property="twitter:title" content="Olavo Stauros - Systems Analysis Student" />
+		<meta property="twitter:description" content="Personal website of Olavo Stauros, Systems Analysis student from Vila Velha, ES. Passionate about web development and modern technologies." />
+		<meta property="twitter:image" content="/profile-placeholder.svg" />
+		
+		<!-- Favicon and app icons -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		
+		<meta name="generator" content={Astro.generator} />
+		<title>Olavo Stauros - Systems Analysis Student & Web Developer</title>
+		
+		<!-- Preconnect to external domains for performance -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Font loading with display=swap for better performance -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		
 		<!-- Main CSS file -->
 		<link rel="stylesheet" href="/styles/styles.css">
+		
+		<!-- Structured data for SEO -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Olavo Stauros",
+			"jobTitle": "Systems Analysis Student",
+			"description": "Passionate about web development and problem-solving, with experience in administrative roles.",
+			"url": "https://olavostauros.com",
+			"sameAs": [
+				"https://github.com/olavostauros"
+			],
+			"knowsAbout": ["Web Development", "Astro", "Git", "Neovim", "JavaScript", "HTML", "CSS"],
+			"alumniOf": {
+				"@type": "EducationalOrganization",
+				"name": "Systems Analysis Program"
+			},
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Vila Velha",
+				"addressRegion": "Espírito Santo",
+				"addressCountry": "BR"
+			}
+		}
+		</script>
 	</head>
 	<body>
 		<slot />
 		
-		<!-- JavaScript files -->
+		<!-- JavaScript files with proper loading -->
 		<script is:inline src="/scripts/utils.js"></script>
 		<script is:inline src="/scripts/navigation.js"></script>
+		<script is:inline src="/scripts/performance.js"></script>
 	</body>
 </html>

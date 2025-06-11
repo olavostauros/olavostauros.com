@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="projectGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#projectGradient3)"/>
+  
+  <!-- Portfolio mockup -->
+  <rect x="50" y="30" width="300" height="180" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Header -->
+  <rect x="50" y="30" width="300" height="25" rx="8 8 0 0" fill="#f8fafc"/>
+  <circle cx="65" cy="42.5" r="3" fill="#ef4444"/>
+  <circle cx="80" cy="42.5" r="3" fill="#f59e0b"/>
+  <circle cx="95" cy="42.5" r="3" fill="#10b981"/>
+  
+  <!-- Navigation -->
+  <rect x="250" y="37" width="15" height="2" fill="#6b7280"/>
+  <rect x="270" y="37" width="15" height="2" fill="#6b7280"/>
+  <rect x="290" y="37" width="15" height="2" fill="#6b7280"/>
+  <rect x="310" y="37" width="15" height="2" fill="#6b7280"/>
+  
+  <!-- Hero section -->
+  <rect x="60" y="65" width="280" height="60" fill="#f1f5f9"/>
+  <circle cx="120" cy="90" r="15" fill="#6366f1"/>
+  <rect x="150" y="80" width="60" height="4" fill="#1e293b"/>
+  <rect x="150" y="88" width="80" height="3" fill="#64748b"/>
+  <rect x="150" y="95" width="70" height="3" fill="#64748b"/>
+  
+  <!-- Project grid -->
+  <rect x="60" y="140" width="85" height="55" fill="#fafafa" stroke="#e2e8f0"/>
+  <rect x="65" y="145" width="75" height="25" fill="#e2e8f0"/>
+  <rect x="65" y="175" width="50" height="2" fill="#64748b"/>
+  <rect x="65" y="180" width="40" height="2" fill="#94a3b8"/>
+  <rect x="65" y="185" width="45" height="2" fill="#94a3b8"/>
+  
+  <rect x="155" y="140" width="85" height="55" fill="#fafafa" stroke="#e2e8f0"/>
+  <rect x="160" y="145" width="75" height="25" fill="#e2e8f0"/>
+  <rect x="160" y="175" width="50" height="2" fill="#64748b"/>
+  <rect x="160" y="180" width="40" height="2" fill="#94a3b8"/>
+  <rect x="160" y="185" width="45" height="2" fill="#94a3b8"/>
+  
+  <rect x="250" y="140" width="85" height="55" fill="#fafafa" stroke="#e2e8f0"/>
+  <rect x="255" y="145" width="75" height="25" fill="#e2e8f0"/>
+  <rect x="255" y="175" width="50" height="2" fill="#64748b"/>
+  <rect x="255" y="180" width="40" height="2" fill="#94a3b8"/>
+  <rect x="255" y="185" width="45" height="2" fill="#94a3b8"/>
+  
+  <text x="200" y="225" text-anchor="middle" font-family="Inter, sans-serif" 
+        font-size="16" fill="white" font-weight="600">
+    Portfolio Project
+  </text>
+  
+  <!-- Tech indicators -->
+  <rect x="140" y="235" width="30" height="12" rx="6" fill="#61dafb"/>
+  <text x="155" y="244" text-anchor="middle" font-family="Inter, sans-serif" 
+        font-size="8" fill="black" font-weight="500">React</text>
+  
+  <rect x="175" y="235" width="25" height="12" rx="6" fill="#3b82f6"/>
+  <text x="187.5" y="244" text-anchor="middle" font-family="Inter, sans-serif" 
+        font-size="8" fill="white" font-weight="500">TS</text>
+  
+  <rect x="205" y="235" width="35" height="12" rx="6" fill="#06b6d4"/>
+  <text x="222.5" y="244" text-anchor="middle" font-family="Inter, sans-serif" 
+        font-size="8" fill="white" font-weight="500">Tailwind</text>
+</svg>

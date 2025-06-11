@@ -2,27 +2,36 @@
 // Header component with fixed navigation and mobile hamburger menu
 ---
 
-<header>
+<header role="banner">
+	<!-- Skip to main content link for screen readers -->
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+	
 	<nav role="navigation" aria-label="Main navigation">
 		<div class="nav-container">
 			<div class="nav-logo">
-				<a href="#hero">Olavo Stauros</a>
+				<a href="#hero" aria-label="Olavo Stauros - Return to top">Olavo Stauros</a>
 			</div>
 			
 			<!-- Mobile hamburger menu button -->
-			<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-				<span></span>
-				<span></span>
-			</label>
+			<button 
+				type="button" 
+				id="nav-toggle" 
+				class="nav-toggle" 
+				aria-label="Toggle navigation menu"
+				aria-expanded="false"
+				aria-controls="nav-links"
+			>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</button>
 			
-			<div class="nav-links">
-				<a href="#hero">Home</a>
-				<a href="#about">About</a>
-				<a href="#projects">Projects</a>
-				<a href="#contact">Contact</a>
-			</div>
+			<ul class="nav-links" id="nav-links" role="menubar">
+				<li role="none"><a href="#hero" role="menuitem" tabindex="0">Home</a></li>
+				<li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
+				<li role="none"><a href="#projects" role="menuitem" tabindex="0">Projects</a></li>
+				<li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
+			</ul>
 		</div>
 	</nav>
 </header>
