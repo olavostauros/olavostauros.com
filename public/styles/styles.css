@@ -194,11 +194,6 @@ header {
   border-radius: 2px;
 }
 
-/* Main content spacing for fixed header */
-main {
-  margin-top: 70px;
-}
-
 /* Sections */
 section {
   padding: var(--spacing-xxl) 0;
