@@ -198,52 +198,6 @@ section {
   padding: var(--spacing-xxl) 0;
 }
 
-/* Full-width Hero Section */
-#hero {
-  background: linear-gradient(135deg, var(--light) 0%, #f0e7d8 50%, var(--light) 100%);
-  min-height: calc(100vh - 70px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-#hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(140, 3, 14, 0.02) 50%, transparent 70%);
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 0 var(--spacing-lg);
-}
-
-.hero-content h1 {
-  font-weight: 800;
-  margin-bottom: var(--spacing-md);
-  background: linear-gradient(135deg, var(--dark) 0%, var(--red-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-content p {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: var(--gray);
-  margin-bottom: var(--spacing-xl);
-  line-height: 1.7;
-}
-
 /* CTA Buttons */
 .cta-button {
   display: inline-flex;
@@ -616,14 +570,6 @@ img {
   box-shadow: 0 4px 12px rgba(140, 3, 14, 0.3);
 }
 
-/* Hero CTA Layout */
-.hero-cta {
-  display: flex;
-  gap: var(--spacing-md);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 /* Project Status Badge */
 .project-header {
   display: flex;
@@ -805,10 +751,6 @@ img[loading="lazy"].loaded {
     background: var(--white);
     border-color: #374151;
   }
-  
-  #hero {
-    background: linear-gradient(135deg, var(--light) 0%, #0f172a 50%, var(--light) 100%);
-  }
 }
 
 /* Responsive About Section */
@@ -827,11 +769,6 @@ img[loading="lazy"].loaded {
     width: 250px;
     height: 250px;
     margin: 0 auto;
-  }
-  
-  .hero-cta {
-    flex-direction: column;
-    align-items: center;
   }
   
   .cta-button {
