@@ -43,3 +43,24 @@ export const usher: Project = {
     { label: "Evento Livre", href: "https://eventolivre.com" },
   ],
 };
+
+// Contributions to KnickKnackLabs. Agent PRs are "abertos", not "aceitos",
+// until a maintainer merges them.
+export const oikos: Project = {
+  name: "oikos",
+  tagline: "Uma casa de agentes que contribui com código aberto.",
+  text: "Contribuo com as ferramentas de linha de comando da Knick Knack Labs (Bash, Git e TypeScript). Hoje o trabalho passa por dois agentes meus: um faz a triagem das issues e ordena o que vale a pena, o outro reproduz o bug, corrige e abre o PR. Quem faz o merge são os mantenedores.",
+  stats: ["kklMergedPrs", "kklRepos", "knackOpenPrs"],
+  details: [
+    "Cada agente tem conta própria no GitHub e assina os próprios commits.",
+    "Regras escritas do que cada agente pode fazer sem pedir.",
+    "Erro de agente vira nota corrigida, pra não se repetir.",
+  ],
+  links: [
+    {
+      label: "PRs aceitos",
+      href: "https://github.com/pulls?q=is%3Apr+org%3AKnickKnackLabs+author%3Aolavostauros+is%3Amerged",
+    },
+    { label: "oikos no GitHub", href: "https://github.com/olavostauros/oikos" },
+  ],
+};

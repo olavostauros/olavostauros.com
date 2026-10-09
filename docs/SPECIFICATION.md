@@ -37,7 +37,7 @@ Principles:
 
 | Route | Content | Indexed |
 |---|---|---|
-| `/` | Bare: name, one line, LinkedIn and GitHub links. Placeholder until the real home page. | yes |
+| `/` | Name, one line, LinkedIn and GitHub links, and two project cards, Usher and oikos (KnickKnackLabs contributions), with `ProofCard` and facts from `facts.ts`. Placeholder until the real home page. | yes |
 | `/jotha-prime-pitch` | The pitch page (§4) | **no** (`noindex, nofollow`) |
 | `/404` | Short, in Portuguese, link to `/` | no |
 
@@ -225,6 +225,7 @@ file plus a route.
 | 2026-10-09 | Email shown: olavodevilhenalima@gmail.com. WhatsApp: +55 27 98121-8258. |
 | 2026-10-09 | DNS moves off Vercel to **Cloudflare** (DNS only, no proxy), keeping the Resend records (§11). |
 | 2026-10-09 | The repo is public, `docs/` and `AGENTS.md` included. |
+| 2026-10-09 | The home page shows Usher and oikos, the KnickKnackLabs contributions (Olavo's call). Their numbers go through `assertFresh` like the pitch page's. Agent PRs are called "abertos" until merged. |
 
 ## 11. DNS (set up 2026-10-09)
 

@@ -1,13 +1,19 @@
 ---
 import Base from "../layouts/Base.astro";
+import Section from "../components/Section.astro";
+import ProofCard from "../components/ProofCard.astro";
 import { site } from "../data/site";
+import { usher, oikos } from "../data/projects";
+import { assertFresh } from "../data/facts";
+
+assertFresh([...usher.stats, ...oikos.stats]);
 ---
 
 <Base
   title={site.name}
   description="Sistemas de IA que rodam em produção, operados por um time de agentes."
 >
-  <main class="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center px-4 py-16 sm:px-6">
+  <main class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
     <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">{site.name}</h1>
     <p class="mt-4 max-w-[34rem] text-lg leading-relaxed text-muted">
       Construo sistemas de IA que rodam em produção, operados por um time de agentes. {site.place}.
@@ -17,5 +23,12 @@ import { site } from "../data/site";
       <a class="text-accent underline underline-offset-4" href={site.github}>GitHub</a>
       <a class="text-accent underline underline-offset-4" href={`mailto:${site.email}`}>{site.email}</a>
     </p>
+
+    <Section title="Sistemas que já rodam" kicker="Projetos">
+      <div class="space-y-4">
+        <ProofCard project={usher} index={1} />
+        <ProofCard project={oikos} index={2} />
+      </div>
+    </Section>
   </main>
 </Base>

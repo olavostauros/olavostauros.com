@@ -52,6 +52,24 @@ export const facts = {
     source: "usher src/evcrawl/sources/",
     checked: "2026-10-09",
   },
+  kklMergedPrs: {
+    value: "44",
+    label: "PRs aceitos pelos mantenedores",
+    source: "gh search prs --owner KnickKnackLabs --author olavostauros --merged (2026-05-25..07-02)",
+    checked: "2026-10-09",
+  },
+  kklRepos: {
+    value: "8",
+    label: "repositórios da Knick Knack Labs",
+    source: "same search, unique repositories of the merged PRs",
+    checked: "2026-10-09",
+  },
+  knackOpenPrs: {
+    value: "17",
+    label: "PRs abertos pelos agentes, em revisão",
+    source: "gh search prs --owner KnickKnackLabs --author knack-oikos (all open, none merged)",
+    checked: "2026-10-09",
+  },
 } satisfies Record<string, Fact>;
 
 export type FactKey = keyof typeof facts;
