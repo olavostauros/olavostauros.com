@@ -90,7 +90,7 @@ wording is Olavo's.
   cities, a public API.
 - Detail: Google Cloud Spot VM with automatic restart, a daily cost cap,
   Grafana dashboards, freshness alerts.
-- Link: api.eventolivre.com (the API only, not the repo).
+- Links: eventolivre.com/usher (the project page) and eventolivre.com. Not the repo.
 
 Every number comes from `src/data/facts.ts` (§5).
 

@@ -39,7 +39,7 @@ export const usher: Project = {
     "Deploy e auditoria de segurança feitos por agentes, com aprovação humana.",
   ],
   links: [
-    { label: "API ao vivo", href: "https://api.eventolivre.com/v1/cities" },
+    { label: "Usher", href: "https://eventolivre.com/usher/" },
     { label: "Evento Livre", href: "https://eventolivre.com" },
   ],
 };
