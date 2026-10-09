@@ -1,0 +1,57 @@
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import ProofCard from "../components/ProofCard.astro";
+import Bridge from "../components/Bridge.astro";
+import PilotFlow from "../components/PilotFlow.astro";
+import OfferLadder from "../components/OfferLadder.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Footer from "../components/Footer.astro";
+import VideoPlayer from "../components/islands/VideoPlayer";
+import ContactCTA from "../components/islands/ContactCTA";
+import { pitch } from "../data/pitches/jotha-prime";
+import { plantao, usher } from "../data/projects";
+import { assertFresh, lastChecked } from "../data/facts";
+import { whatsappLink } from "../data/site";
+
+assertFresh(pitch.facts);
+---
+
+<Base title={pitch.meta.title} description={pitch.meta.description} noindex>
+  <main class="mx-auto max-w-3xl px-4 pb-24 sm:px-6 sm:pb-10">
+    <Hero hero={pitch.hero} />
+
+    <div id="video">
+      <VideoPlayer client:visible {...pitch.video} />
+    </div>
+
+    <Section title="Dois sistemas que já rodam" kicker="A prova">
+      <div class="space-y-4">
+        <ProofCard project={plantao} index={1} />
+        <Bridge text={pitch.bridge} />
+        <ProofCard project={usher} index={2} />
+      </div>
+    </Section>
+
+    <Section title={pitch.pilot.title} kicker={`Pra ${pitch.company}`}>
+      <PilotFlow pilot={pitch.pilot} />
+    </Section>
+
+    <Section title="Como a gente pode começar" kicker="Passo a passo">
+      <OfferLadder ladder={pitch.ladder} />
+    </Section>
+
+    <CallToAction cta={pitch.cta} id="contato" />
+
+    <Footer checked={lastChecked(pitch.facts)} />
+  </main>
+
+  <ContactCTA
+    client:idle
+    href={whatsappLink(pitch.cta.whatsappText)}
+    label={pitch.cta.button}
+    afterId="video"
+    hideId="contato"
+  />
+</Base>

@@ -1,0 +1,21 @@
+---
+import { site } from "../data/site";
+
+interface Props {
+  checked?: string;
+}
+
+const { checked } = Astro.props;
+const checkedLabel =
+  checked &&
+  new Date(`${checked}T12:00:00`).toLocaleDateString("pt-BR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+---
+
+<footer class="mt-6 border-t border-line py-8 text-sm text-muted">
+  <p>{site.name} · {site.place}</p>
+  {checkedLabel && <p class="mt-1">Números conferidos em {checkedLabel}.</p>}
+</footer>

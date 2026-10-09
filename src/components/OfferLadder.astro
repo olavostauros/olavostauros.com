@@ -1,0 +1,28 @@
+---
+import type { Pitch } from "../data/pitches/jotha-prime";
+
+interface Props {
+  ladder: Pitch["ladder"];
+}
+
+const { ladder } = Astro.props;
+---
+
+<ol class="relative space-y-6 border-l border-line pl-6">
+  {
+    ladder.map((step, i) => (
+      <li class="relative">
+        <span
+          aria-hidden="true"
+          class:list={[
+            "absolute top-1.5 -left-[1.82rem] size-3 rounded-full border-2",
+            i === 0 ? "border-accent bg-accent" : "border-line bg-bg",
+          ]}
+        />
+        <h3 class="font-semibold">{step.title}</h3>
+        {step.detail && <p class="font-mono text-xs text-muted">{step.detail}</p>}
+        <p class="mt-1 leading-snug text-muted">{step.text}</p>
+      </li>
+    ))
+  }
+</ol>

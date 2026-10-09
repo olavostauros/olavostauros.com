@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  kicker?: string;
+  id?: string;
+}
+
+const { title, kicker, id } = Astro.props;
+---
+
+<section id={id} class="py-10 sm:py-14">
+  {kicker && <p class="font-mono text-xs uppercase tracking-[0.14em] text-muted">{kicker}</p>}
+  <h2 class="mt-2 text-2xl font-semibold tracking-tight text-balance sm:text-3xl">{title}</h2>
+  <div class="mt-6">
+    <slot />
+  </div>
+</section>

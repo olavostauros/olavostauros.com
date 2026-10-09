@@ -1,0 +1,48 @@
+---
+import type { Project } from "../data/projects";
+import Stat from "./Stat.astro";
+
+interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+---
+
+<article class="rounded-2xl border border-line bg-surface p-6 sm:p-8">
+  <p class="font-mono text-xs text-muted">0{index}</p>
+  <h3 class="mt-2 text-2xl font-semibold tracking-tight">{project.name}</h3>
+  <p class="mt-1 text-lg font-medium text-accent">{project.tagline}</p>
+  <p class="mt-4 leading-relaxed text-muted text-pretty">{project.text}</p>
+
+  <dl class="mt-6 grid grid-cols-3 gap-4 border-y border-line py-5">
+    {project.stats.map((key) => <Stat fact={key} />)}
+  </dl>
+
+  <ul class="mt-5 space-y-2">
+    {
+      project.details.map((d) => (
+        <li class="flex gap-3 leading-snug">
+          <span aria-hidden="true" class="mt-[0.45rem] size-1.5 shrink-0 rounded-full bg-accent" />
+          <span>{d}</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p class="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+    {
+      project.links.map((l) => (
+        <a
+          href={l.href}
+          class="font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
+          target="_blank"
+          rel="noopener"
+        >
+          {l.label} ↗
+        </a>
+      ))
+    }
+  </p>
+</article>

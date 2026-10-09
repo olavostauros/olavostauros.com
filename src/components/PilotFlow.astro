@@ -1,0 +1,27 @@
+---
+import type { Pitch } from "../data/pitches/jotha-prime";
+
+interface Props {
+  pilot: Pitch["pilot"];
+}
+
+const { pilot } = Astro.props;
+---
+
+<p class="max-w-[38rem] text-lg leading-relaxed text-muted text-pretty">{pilot.intro}</p>
+
+<ol class="mt-6 grid gap-3 sm:grid-cols-2">
+  {
+    pilot.steps.map((step, i) => (
+      <li class="relative rounded-2xl border border-line bg-surface p-5">
+        <span class="flex size-8 items-center justify-center rounded-full bg-accent font-mono text-sm font-semibold text-accent-ink">
+          {i + 1}
+        </span>
+        <h3 class="mt-3 font-semibold">{step.title}</h3>
+        <p class="mt-1 leading-snug text-muted">{step.text}</p>
+      </li>
+    ))
+  }
+</ol>
+
+<p class="mt-6 border-l-2 border-accent pl-4 leading-relaxed">{pilot.split}</p>

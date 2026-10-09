@@ -1,0 +1,21 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+---
+
+<Base
+  title={site.name}
+  description="Sistemas de IA que rodam em produção, operados por um time de agentes."
+>
+  <main class="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center px-4 py-16 sm:px-6">
+    <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">{site.name}</h1>
+    <p class="mt-4 max-w-[34rem] text-lg leading-relaxed text-muted">
+      Construo sistemas de IA que rodam em produção, operados por um time de agentes. {site.place}.
+    </p>
+    <p class="mt-8 flex flex-wrap gap-x-6 gap-y-2 font-medium">
+      <a class="text-accent underline underline-offset-4" href={site.linkedin}>LinkedIn</a>
+      <a class="text-accent underline underline-offset-4" href={site.github}>GitHub</a>
+      <a class="text-accent underline underline-offset-4" href={`mailto:${site.email}`}>{site.email}</a>
+    </p>
+  </main>
+</Base>

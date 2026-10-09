@@ -1,0 +1,17 @@
+---
+import { facts, type FactKey } from "../data/facts";
+
+interface Props {
+  fact: FactKey;
+}
+
+const f = facts[Astro.props.fact];
+---
+
+<div>
+  <dt class="sr-only">{f.label}</dt>
+  <dd>
+    <span class="block font-mono text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{f.value}</span>
+    <span class="mt-1 block text-sm leading-snug text-muted">{f.label}</span>
+  </dd>
+</div>
