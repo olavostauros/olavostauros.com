@@ -226,26 +226,22 @@ file plus a route.
 | 2026-10-09 | DNS moves off Vercel to **Cloudflare** (DNS only, no proxy), keeping the Resend records (§11). |
 | 2026-10-09 | The repo is public, `docs/` and `AGENTS.md` included. |
 
-## 11. DNS (checked 2026-10-09)
+## 11. DNS (set up 2026-10-09)
 
-- Registrar: Namecheap, registered until 2026-12-31.
-- Nameservers: **Vercel** (`ns1/ns2.vercel-dns.com`), not Cloudflare. The
-  domain lives in the Vercel team "olavostauros' projects", which has **no
-  projects**, so `https://olavostauros.com` returns a Vercel 404 today.
-- Records in Vercel DNS:
-  - `@` and `*`: ALIAS to Vercel (system-managed). These must change.
-  - `resend._domainkey` TXT, `send` TXT (SPF) and `send` MX: the Resend
-    email setup. **Keep these** wherever DNS ends up.
-  - CAA for pki.goog, sectigo.com and letsencrypt.org. GitHub Pages uses
-    Let's Encrypt, so they're fine.
-- Target for GitHub Pages: `@` A records 185.199.108.153, .109.153,
-  .110.153, .111.153 (plus AAAA 2606:50c0:8000–8003::153), and `www` CNAME
-  `olavostauros.github.io`. Verify the domain in GitHub account settings
-  (a TXT record) to prevent takeover.
-- Options considered (decided 2026-10-09: Cloudflare):
-  1. **Stay on Vercel DNS:** replace the `@` and `*` records with the
-     GitHub ones. Fewest moves, but Vercel may keep re-adding its
-     system-managed records while the domain sits in the team.
-  2. **Move nameservers to Cloudflare:** add the zone in Cloudflare, copy
-     the Resend records and add the GitHub ones, then change the
-     nameservers at Namecheap. More steps, but a clean zone you control.
+- **Registrar:** Namecheap, registered until **2026-12-31**, auto-renew
+  **off**. Nameservers: `celine.ns.cloudflare.com`, `rex.ns.cloudflare.com`.
+- **DNS:** Cloudflare (Free plan), every record **DNS only** (grey cloud).
+  GitHub Pages issues its own Let's Encrypt certificate, which needs the
+  records unproxied. DNSSEC is off.
+- **Records:**
+  - `@` A 185.199.108–111.153 and AAAA 2606:50c0:8000–8003::153 (GitHub
+    Pages); `www` CNAME `olavostauros.github.io`.
+  - `_github-pages-challenge-olavostauros` TXT: GitHub domain verification
+    (the domain is verified on the olavostauros account, which blocks
+    takeover by other accounts). Keep it.
+  - `resend._domainkey` TXT, `send` TXT (SPF), `send` MX: Resend email. Keep.
+  - CAA for letsencrypt.org, pki.goog, sectigo.com.
+  - `_domainconnect` CNAME to Vercel: left over from the Vercel scan, safe
+    to delete.
+- **Before:** nameservers were Vercel's (`ns1/ns2.vercel-dns.com`); the
+  Vercel team still lists the domain but no longer serves it.
