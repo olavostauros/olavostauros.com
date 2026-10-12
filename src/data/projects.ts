@@ -1,8 +1,6 @@
 import type { FactKey } from "./facts";
 
 // The proof. Rules in AGENTS.md §4: never name or link private repos.
-// Plantão has no links for now: its site shows only fictitious examples, and
-// its public repo is not linked until it is scrubbed and Olavo says so.
 
 export type Project = {
   name: string;
@@ -11,19 +9,6 @@ export type Project = {
   stats: FactKey[];
   details: string[];
   links: { label: string; href: string }[];
-};
-
-export const plantao: Project = {
-  name: "Plantão",
-  tagline: "De PDF bagunçado a banco de dados confiável.",
-  text: "As provas de concursos policiais só existem em PDF, espalhadas nos sites das bancas, e muitas são escaneadas. Um robô encontra as provas, eu aprovo cada fonte, e o pipeline extrai as questões, faz OCR quando precisa, classifica por assunto e valida.",
-  stats: ["plantaoQuestions", "plantaoExams", "plantaoHours"],
-  details: [
-    "Cada questão aponta pro documento e a página de onde saiu.",
-    "Classificação feita por agente e validada contra uma taxonomia.",
-    "Carga idempotente, sem duplicatas.",
-  ],
-  links: [],
 };
 
 export const usher: Project = {

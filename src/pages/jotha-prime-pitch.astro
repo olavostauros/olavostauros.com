@@ -3,7 +3,6 @@ import Base from "../layouts/Base.astro";
 import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import ProofCard from "../components/ProofCard.astro";
-import Bridge from "../components/Bridge.astro";
 import PilotFlow from "../components/PilotFlow.astro";
 import OfferLadder from "../components/OfferLadder.astro";
 import CallToAction from "../components/CallToAction.astro";
@@ -11,7 +10,7 @@ import Footer from "../components/Footer.astro";
 import VideoPlayer from "../components/islands/VideoPlayer";
 import ContactCTA from "../components/islands/ContactCTA";
 import { pitch } from "../data/pitches/jotha-prime";
-import { oikos, plantao, usher } from "../data/projects";
+import { oikos, usher } from "../data/projects";
 import { assertFresh, lastChecked } from "../data/facts";
 import { whatsappLink } from "../data/site";
 
@@ -31,12 +30,6 @@ assertFresh(pitch.facts);
         <ProofCard project={oikos} index={1} />
         <ProofCard project={usher} index={2} />
       </div>
-    </Section>
-
-    <Section title={pitch.engine.title} kicker={pitch.engine.kicker}>
-      <p class="mb-6 max-w-[38rem] text-lg leading-relaxed text-muted text-pretty">{pitch.engine.intro}</p>
-      <ProofCard project={plantao} index={3} />
-      <Bridge text={pitch.bridge} />
     </Section>
 
     <Section title={pitch.pilot.title} kicker={`Pra ${pitch.company}`}>

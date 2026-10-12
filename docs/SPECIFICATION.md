@@ -99,23 +99,10 @@ wording is Olavo's.
 
 Every number comes from `src/data/facts.ts` (§5).
 
-### 4.4 The engine and the bridge
+### 4.4 (Removed) The engine and the bridge
 
-"O motor do piloto": a section after the proof, because Plantão is not in
-the video but is the proof behind the pilot.
-
-**Plantão**: messy official PDFs become validated, traceable data.
-- Numbers: 5,152 questions extracted and validated, 110 exams, 25 agencies,
-  about 30 hours from first commit to coverage report.
-- Detail he'll respect: every question points to its source document and
-  page; scanned PDFs go through OCR; loads are idempotent; a human approves
-  each source.
-- **No links** (AGENTS.md §4): not the repo until it's scrubbed and Olavo
-  says so, not the site (fictitious examples). "Te mostro rodando no café."
-
-Then one short paragraph, the bridge: the same engine turns NF-e, contracts
-and HR documents into validated data, the work Jotha's Senior clients still
-do by hand.
+Removed on 2026-10-12 (§10): the pitch page doesn't mention Plantão. The
+proof goes straight from Usher to the pilot idea.
 
 ### 4.5 The pilot idea for Jotha
 
@@ -252,6 +239,7 @@ file plus a route.
 | 2026-10-12 | No Plantão link on the site: the public repo still names the private codename (being scrubbed) and the site shows fictitious examples. A link comes back only when the repo is scrubbed and Olavo says so. |
 | 2026-10-12 | The pitch page follows the new video: hero → video ("A engenharia, em 2 minutos") → oikos (with lab) and Usher → Plantão as "o motor do piloto" + the bridge → pilot → ladder → CTA. |
 | 2026-10-12 | Usher: "corte automático de gasto quando bate o orçamento", no R$ figure (Grafana has no cost panel; R$ 15/day is a target). Plantão: "cerca de 30 horas" (the current report is 30 h 07 min). Facts re-checked 2026-10-12. |
+| 2026-10-12 | Plantão comes off the pitch page entirely: the "O motor do piloto" section (intro, Plantão card, bridge paragraph) is removed, not renamed, since police exams, Cebraspe and the numbers identify it anyway. Its `projects.ts` entry and `plantao*` facts are deleted (no other page used them). The page is now hero → video → oikos and Usher → pilot → ladder → CTA; the pilot and ladder wording is unchanged. |
 
 ## 11. DNS (set up 2026-10-09)
 

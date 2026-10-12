@@ -45,16 +45,11 @@ spend 20 minutes with Olavo, it goes.
    rules: the agents open PRs in open-source repos and never merge) and
    Usher (a national event catalog with a public API, running on a Spot VM
    that restarts itself, with Grafana and an automatic budget cut).
-3. **The engine and the bridge:** Plantão (messy official PDFs become
-   validated, traceable questions in about 30 hours) is not in the video,
-   but it's the proof behind the pilot: turning messy documents into
-   validated data is exactly what Jotha's Senior clients still do by hand
-   (NF-e, contracts, HR documents).
-4. **One pilot idea for Jotha:** a document-intake agent. A client sends a
+3. **One pilot idea for Jotha:** a document-intake agent. A client sends a
    photo or PDF on WhatsApp (where JothaX already lives), and the agent
    turns it into validated data loaded into Senior, with a review queue and
    traceability.
-5. **A small first step:** a 20-minute coffee in Serra. Behind it, a ladder:
+4. **A small first step:** a 20-minute coffee in Serra. Behind it, a ladder:
    a fixed-price diagnostic, then a pilot, then an embedded engineer or a
    white-label partnership.
 

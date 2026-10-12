@@ -14,9 +14,6 @@ export type Pitch = {
   video: { youtubeId: string | null; poster: string | null; title: string };
   // The proof, in the video's order.
   proof: { kicker: string; title: string };
-  // The proof behind the pilot, which isn't in the video.
-  engine: { kicker: string; title: string; intro: string };
-  bridge: string;
   pilot: {
     title: string;
     intro: string;
@@ -53,14 +50,6 @@ export const pitch: Pitch = {
     kicker: "A prova",
     title: "Agentes com regras, e um sistema em produção",
   },
-  engine: {
-    kicker: "O motor do piloto",
-    title: "De PDF bagunçado a dado validado",
-    intro:
-      "Não está no vídeo, mas é a base da ideia que eu trago pra Jotha. Te mostro rodando no café.",
-  },
-  bridge:
-    "O Plantão lê prova de concurso, mas o motor é o mesmo pra nota fiscal, contrato, documento de admissão e atestado: papel bagunçado virando dado validado, rastreável até a página de origem. É o trabalho que muito cliente Senior ainda faz na mão.",
   pilot: {
     title: "Uma ideia de piloto: o agente de entrada de documentos",
     intro:
@@ -120,9 +109,5 @@ export const pitch: Pitch = {
     "usherEvents",
     "usherCities",
     "usherPlatforms",
-    "plantaoQuestions",
-    "plantaoExams",
-    "plantaoAgencies",
-    "plantaoHours",
   ],
 };

@@ -1,42 +1,17 @@
 // Every number shown on the site. Copy values from
 // ~/Work/operation-get-a-job/video/jotha-prime/script.md, which is checked
 // against the repos and the live API. Update `checked` whenever a value is
-// re-checked. Sources name only public things (Plantão, Usher, the API,
-// GitHub search), because this repo is public.
+// re-checked. Sources name only public things (Usher, the API, GitHub
+// search), because this repo is public.
 
 export type Fact = {
-  value: string; // as shown, e.g. "5.152"
-  label: string; // what it counts, e.g. "questões extraídas e validadas"
+  value: string; // as shown, e.g. "44"
+  label: string; // what it counts, e.g. "cidades"
   source: string; // where it was checked
   checked: string; // ISO date of the last check
 };
 
 export const facts = {
-  plantaoQuestions: {
-    value: "5.152",
-    label: "questões extraídas e validadas",
-    source: "Plantão coverage report, generated 2026-10-08 19:54 UTC",
-    checked: "2026-10-12",
-  },
-  plantaoExams: {
-    value: "110",
-    label: "provas do Cebraspe",
-    source: "Plantão coverage report, table by board, agency and year",
-    checked: "2026-10-12",
-  },
-  plantaoAgencies: {
-    value: "25",
-    label: "órgãos: PF, PRF, polícias civis, militares e bombeiros",
-    source: "Plantão coverage report, table by board, agency and year",
-    checked: "2026-10-12",
-  },
-  // Not "< 30 h": the current report is 7 minutes past it.
-  plantaoHours: {
-    value: "~30 h",
-    label: "do primeiro commit ao relatório",
-    source: "Plantão git log: first commit 2026-10-07 10:47 -03, report 2026-10-08 16:54 -03 (30 h 07 min)",
-    checked: "2026-10-12",
-  },
   usherEvents: {
     // "+12 mil" rather than the exact count, so it stays true as the
     // catalog moves; split so it fits the stat column at 375 px.
