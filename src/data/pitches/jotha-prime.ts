@@ -45,8 +45,8 @@ export const pitch: Pitch = {
       "Sou o Olavo, de Vila Velha. Construo sistemas de IA que rodam em produção, operados por um time de agentes especializados, e respondo pelo resultado. Fiz esta página pra te mostrar como eu trabalho com agentes e um sistema meu em produção, e uma ideia de piloto pra Jotha.",
   },
   video: {
-    youtubeId: null,
-    poster: null,
+    youtubeId: "zZOANBfphKA",
+    poster: "/jotha-prime-pitch-poster.webp",
     title: "A engenharia, em 2 minutos",
   },
   proof: {
