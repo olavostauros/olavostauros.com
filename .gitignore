@@ -4,3 +4,6 @@ node_modules/
 .env
 .env.*
 .DS_Store
+
+# Private words for scripts/check-private-words.mjs. Never commit.
+.private-words

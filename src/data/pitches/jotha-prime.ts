@@ -12,6 +12,10 @@ export type Pitch = {
   // null until the video is on YouTube (unlisted). `poster` is a local file
   // in public/, so nothing loads from YouTube before the tap.
   video: { youtubeId: string | null; poster: string | null; title: string };
+  // The proof, in the video's order.
+  proof: { kicker: string; title: string };
+  // The proof behind the pilot, which isn't in the video.
+  engine: { kicker: string; title: string; intro: string };
   bridge: string;
   pilot: {
     title: string;
@@ -31,19 +35,29 @@ export const pitch: Pitch = {
   meta: {
     title: "Para a Jotha Prime · Olavo de Vilhena Lima",
     description:
-      "IA com engenharia, rodando em produção: dois sistemas e uma ideia de piloto para a Jotha Prime.",
+      "IA com engenharia, rodando em produção: como eu trabalho com agentes, um sistema meu em produção e uma ideia de piloto para a Jotha Prime.",
   },
   hero: {
     eyebrow: "Para o Caúca · Jotha Prime",
     quote: "IA sem engenharia é só apresentação.",
     headline: "Então aqui vai a engenharia.",
     lead:
-      "Sou o Olavo, de Vila Velha. Construo sistemas de IA que rodam em produção, operados por um time de agentes especializados, e respondo pelo resultado. Fiz esta página pra te mostrar dois deles e uma ideia de piloto pra Jotha.",
+      "Sou o Olavo, de Vila Velha. Construo sistemas de IA que rodam em produção, operados por um time de agentes especializados, e respondo pelo resultado. Fiz esta página pra te mostrar como eu trabalho com agentes e um sistema meu em produção, e uma ideia de piloto pra Jotha.",
   },
   video: {
     youtubeId: null,
     poster: null,
-    title: "Dois sistemas em 2 minutos",
+    title: "A engenharia, em 2 minutos",
+  },
+  proof: {
+    kicker: "A prova",
+    title: "Agentes com regras, e um sistema em produção",
+  },
+  engine: {
+    kicker: "O motor do piloto",
+    title: "De PDF bagunçado a dado validado",
+    intro:
+      "Não está no vídeo, mas é a base da ideia que eu trago pra Jotha. Te mostro rodando no café.",
   },
   bridge:
     "O Plantão lê prova de concurso, mas o motor é o mesmo pra nota fiscal, contrato, documento de admissão e atestado: papel bagunçado virando dado validado, rastreável até a página de origem. É o trabalho que muito cliente Senior ainda faz na mão.",
@@ -100,12 +114,15 @@ export const pitch: Pitch = {
     whatsappText: "Fala, Olavo! Vi a página da Jotha. Bora marcar o café?",
   },
   facts: [
+    "kklMergedPrs",
+    "kklRepos",
+    "knackOpenPrs",
+    "usherEvents",
+    "usherCities",
+    "usherPlatforms",
     "plantaoQuestions",
     "plantaoExams",
     "plantaoAgencies",
     "plantaoHours",
-    "usherEvents",
-    "usherCities",
-    "usherPlatforms",
   ],
 };

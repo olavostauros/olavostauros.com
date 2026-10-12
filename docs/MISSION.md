@@ -16,8 +16,8 @@ production**.
 
 The decision-maker is **Caúca**. He is a hands-on infrastructure and ERP
 person, he follows Olavo on Instagram, and his own reel is titled "IA sem
-engenharia é só apresentação". A DM is too small to carry a video, two
-projects and a pilot idea. A link to one page carries all of it, and he can
+engenharia é só apresentação". A DM is too small to carry a video, the
+proof and a pilot idea. A link to one page carries all of it, and he can
 forward it to Thalita (CEO).
 
 ## The page's one job
@@ -41,13 +41,15 @@ spend 20 minutes with Olavo, it goes.
 
 1. **I build AI that runs in production, built and operated by agents.**
    That's engineering, not slides, which echoes his own line.
-2. **Proof:** Plantão (messy official PDFs become 5,063 validated,
-   traceable questions in under 30 hours) and Usher (a national event
-   catalog with a public API, running in the cloud with monitoring and a
-   cost cap).
-3. **The bridge:** turning messy documents into validated data is exactly
-   what Jotha's Senior clients still do by hand (NF-e, contracts, HR
-   documents).
+2. **Proof, in the video's order:** oikos and lab (how he runs agents with
+   rules: the agents open PRs in open-source repos and never merge) and
+   Usher (a national event catalog with a public API, running on a Spot VM
+   that restarts itself, with Grafana and an automatic budget cut).
+3. **The engine and the bridge:** Plantão (messy official PDFs become
+   validated, traceable questions in about 30 hours) is not in the video,
+   but it's the proof behind the pilot: turning messy documents into
+   validated data is exactly what Jotha's Senior clients still do by hand
+   (NF-e, contracts, HR documents).
 4. **One pilot idea for Jotha:** a document-intake agent. A client sends a
    photo or PDF on WhatsApp (where JothaX already lives), and the agent
    turns it into validated data loaded into Senior, with a review queue and

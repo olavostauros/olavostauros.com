@@ -1,7 +1,8 @@
 import type { FactKey } from "./facts";
 
-// The proof. Rules in AGENTS.md §4: never name or link private repos, and
-// Plantão links the repo, not the site, until real questions are published.
+// The proof. Rules in AGENTS.md §4: never name or link private repos.
+// Plantão has no links for now: its site shows only fictitious examples, and
+// its public repo is not linked until it is scrubbed and Olavo says so.
 
 export type Project = {
   name: string;
@@ -22,9 +23,7 @@ export const plantao: Project = {
     "Classificação feita por agente e validada contra uma taxonomia.",
     "Carga idempotente, sem duplicatas.",
   ],
-  links: [
-    { label: "Código no GitHub", href: "https://github.com/olavostauros/plantao" },
-  ],
+  links: [],
 };
 
 export const usher: Project = {
@@ -34,7 +33,8 @@ export const usher: Project = {
   stats: ["usherEvents", "usherCities", "usherPlatforms"],
   details: [
     "API pública com OpenAPI, paginação e rate limit.",
-    "Google Cloud em VM Spot, com reinício automático e teto de custo por dia.",
+    "Google Cloud em VM Spot: quando o Google desliga a máquina, ela volta sozinha em minutos.",
+    "Corte automático de gasto quando bate o orçamento.",
     "Painéis no Grafana e alerta quando os dados atrasam.",
     "Deploy e auditoria de segurança feitos por agentes, com aprovação humana.",
   ],
@@ -49,18 +49,20 @@ export const usher: Project = {
 export const oikos: Project = {
   name: "oikos",
   tagline: "Uma casa de agentes que contribui com código aberto.",
-  text: "Contribuo com as ferramentas de linha de comando da Knick Knack Labs (Bash, Git e TypeScript). Hoje o trabalho passa por dois agentes meus: um faz a triagem das issues e ordena o que vale a pena, o outro reproduz o bug, corrige e abre o PR. Quem faz o merge são os mantenedores.",
+  text: "Contribuo com as ferramentas de linha de comando da Knick Knack Labs (Bash, Git e TypeScript). Hoje o trabalho passa por dois agentes meus: um faz a triagem das issues e ordena o que vale a pena, o outro reproduz o bug, corrige e abre o PR. Nenhum dos dois faz merge: isso fica com os mantenedores.",
   stats: ["kklMergedPrs", "kklRepos", "knackOpenPrs"],
   details: [
     "Cada agente tem conta própria no GitHub e assina os próprios commits.",
     "Regras escritas do que cada agente pode fazer sem pedir.",
     "Erro de agente vira nota corrigida, pra não se repetir.",
+    "Daí saiu o lab, um framework aberto: um comando monta as regras, a fila, as permissões e as verificações de um time de agentes, e o lab doctor confere tudo.",
   ],
   links: [
     {
-      label: "PRs aceitos",
+      label: "Meus PRs aceitos",
       href: "https://github.com/pulls?q=is%3Apr+org%3AKnickKnackLabs+author%3Aolavostauros+is%3Amerged",
     },
     { label: "oikos no GitHub", href: "https://github.com/olavostauros/oikos" },
+    { label: "lab no GitHub", href: "https://github.com/olavostauros/lab" },
   ],
 };

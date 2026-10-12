@@ -31,18 +31,20 @@ const { project, index } = Astro.props;
     }
   </ul>
 
-  <p class="mt-6 flex flex-wrap gap-x-5 gap-y-2">
-    {
-      project.links.map((l) => (
-        <a
-          href={l.href}
-          class="font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
-          target="_blank"
-          rel="noopener"
-        >
-          {l.label} ↗
-        </a>
-      ))
-    }
-  </p>
+  {
+    project.links.length > 0 && (
+      <p class="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+        {project.links.map((l) => (
+          <a
+            href={l.href}
+            class="font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
+            target="_blank"
+            rel="noopener"
+          >
+            {l.label} ↗
+          </a>
+        ))}
+      </p>
+    )
+  }
 </article>

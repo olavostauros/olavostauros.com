@@ -19,7 +19,8 @@ there before changing any copy:
 - `AGENTS.md`: the mission, the portfolio rules, the positioning.
 - `targets/jotha-prime/dossier.md` and `strategy.md`: who Caúca and Jotha
   Prime are, the angle, the offer ladder.
-- `video/script.md`: the checked numbers, with sources and dates.
+- `video/jotha-prime/script.md`: the video as it is now, and the checked
+  numbers, with sources and dates.
 
 That directory is the source of truth for facts. This one is the source of
 truth for the site. Don't edit files in `operation-get-a-job/` from here; if
@@ -73,20 +74,30 @@ public/                  static files (video poster, favicon, og image)
   Instagram and LinkedIn).
 - **Every number comes from `src/data/facts.ts`**, and every entry there has
   a source and the date it was checked. Copy them from
-  `operation-get-a-job/video/script.md`, which iris checks. Never type a
+  `operation-get-a-job/video/jotha-prime/script.md`, which iris checks. Never type a
   number into a component. Never show a number nobody checked within the
   week before sending.
-- **Plantão:** say "extraídas e validadas", never "publicadas". Say "menos
-  de 30 horas", not "32 horas". The public site only shows fictitious
-  examples, so link the repo (github.com/olavostauros/plantao) and not the
-  site, until a real snapshot is live.
-- **Usher:** only say "R$ 15 por dia" if the Grafana panel showed it. The
-  public API `api.eventolivre.com` may be linked; the repo is private and
-  may not.
+- **Plantão:** say "extraídas e validadas", never "publicadas". Say "cerca
+  de 30 horas", never "menos de 30" or "32". **No Plantão link at all**
+  (2026-10-12): the public repo still names the private codename and is
+  being scrubbed, and the site only shows fictitious examples. Link neither
+  until the repo is scrubbed and Olavo says so.
+- **Usher:** say "corte automático de gasto quando bate o orçamento", and
+  **never show a R$ figure**: Grafana has no cost panel and R$ 15/day is only
+  a target. The public API `api.eventolivre.com` may be linked; the repo is
+  private and may not.
+- **oikos:** the agents' PRs are "abertos", never "aceitos". Olavo's own
+  merged PRs are a separate number; keep the two apart.
 - **Never** link or name any private repo (Plantão's database repo has an
   internal codename; see `operation-get-a-job/AGENTS.md`), host, IP,
   tailnet, `.env`, dashboard URL or database dump. Don't mention Caúca's or
   Thalita's personal life (family, health), even though it's public.
+- **The private codename never appears in this repo** (2026-10-12): no file,
+  comment, commit message, alt text or build output, and that includes
+  tests and check scripts. `npm run check` and `npm run build` run
+  `scripts/check-private-words.mjs`, which reads the banned words from the
+  gitignored `.private-words` (one per line). Fill that file in locally;
+  never commit it.
 - **The pitch page is `noindex, nofollow`** and isn't linked from anywhere
   else on the site. It's addressed to a named person, so search engines
   shouldn't index it.

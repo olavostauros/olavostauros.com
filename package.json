@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "postbuild": "npm run check:private",
     "preview": "astro preview",
-    "check": "astro check",
+    "check": "astro check && npm run check:private",
+    "check:private": "node scripts/check-private-words.mjs",
     "astro": "astro"
   },
   "dependencies": {
